@@ -24,3 +24,4 @@ configuration options.
    youtube_api
    ora2/index
    install_xblock
+   static_replace/cdn
