@@ -140,6 +140,9 @@
 
 .. _edX Analytics Installation: https://openedx.atlassian.net/wiki/display/OpenOPS/edX+Analytics+Installation
 
+.. _http://ux.edx.org/: http://ux.edx.org/
+
+.. _edx-ui-toolkit GitHub repository: https://github.com/edx/edx-ui-toolkit
 
 .. EDX VMs
 
