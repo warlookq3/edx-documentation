@@ -1,18 +1,28 @@
 .. _Create Coupons:
 
 ######################
-Creating Coupon Codes
+Creating Coupons
 ######################
 
 .. This feature is not in Dogwood.
 
-You can use coupons to provide discounted or free course enrollments to your
-learners. Each coupon includes one or more coupon codes for learners to use.
-Two types of coupon codes are available.
+This topic covers coupons and their associated coupon codes.
 
-* Discount code: These codes offer a discount of up to 99% off the cost of a
-  course.
-* Enrollment code: These codes offer a 100% discount off the cost of a course.
+.. contents::
+   :local:
+   :depth: 1
+
+**********
+Overview
+**********
+
+You can use coupons to provide discounted or free course enrollments to your
+learners. Each coupon consists of one or more *coupon codes* for learners to
+use. Two types of coupon codes are available.
+
+* Discount code: These codes offer a discount of up to 99% off the price of a
+  course seat.
+* Enrollment code: These codes cover the entire price of a course seat.
 
 Both discount codes and enrollment codes can be used in the following ways.
 
@@ -20,16 +30,33 @@ Both discount codes and enrollment codes can be used in the following ways.
 * One time by multiple users.
 * Multiple times by multiple users.
 
+To create a coupon, you specify several options on the **Create New Coupon**
+page, and the system creates the coupon and its associated discount or
+enrollment codes automatically. For more information, see :ref:`Create
+Coupons`.
+
+After you create coupons, you distribute the discount or enrollment codes for
+that coupon using email. Learners use the codes on the course **Checkout** page
+or at specific URLs that you provide. The URL can be for an *offer landing
+page* or for a *redeem endpoint*. For more information, see
+:ref:`Distribute Coupon Codes`.
+
 When you create a coupon, the E-Commerce service generates an order. The
 Invoice Payment Processor module records these orders and assumes out-of-band
 payment for the coupons. The Invoice Payment Processor module also records
 the transaction in the Invoice table for later reconciliation.
 
+For more information about the E-Commerce service, see :ref:`Adding Ecommerce
+to the Open edX Platform`.
+
+.. _Create Coupons:
+
 **************
 Create Coupons
 **************
 
-You create coupons by using the coupon administration tool, which is located at
+You create coupons and their associated discount or enrollment codes by using
+the coupon administration tool, which is located at
 ``http://localhost:8002/coupons/``.
 
 #. In your browser, go to ``http://localhost:8002/coupons/`` to open the coupon
@@ -44,24 +71,52 @@ You create coupons by using the coupon administration tool, which is located at
      Promotion". The name must have fewer than 255 characters.
    * **Course ID**: The ID of the course that you want to provide the coupon
      for. To find the course ID, open the course administration tool at
-     ``localhost:8002/courses``, select your course name in the list of
+     ``http://localhost:8002/courses``, select your course name in the list of
      courses, and then locate the **Course ID** field on the page for the
      course.
    * **Code Type**: Select either **Discount Code** or **Enrollment Code**. An
      enrollment code covers the entire price of a course seat. A discount code
      covers up to 99% of the price of a course seat.
-   * **Seat Type**: The type of "seat" in the course. For example, this may be
+   * **Seat Type**: The type of "seat" in the course. For example, this can be
      "verified" or "professional". The options for this field appear after you
      enter a valid value in the **Course ID** field.
-   * **Category**: Suggested categories for your coupon code. These categories
-     can help you keep track of your codes.
-   * **Valid from** and **Valid until**: The dates and times when you want to
-     start and stop offering the coupon, respectively. The time zone is
-     set to Universal Coordinated Time (UTC). You can edit these fields after
-     you create the coupon.
+   * **Category**: Suggested categories for your discount or enrollment code,
+     such as "Course Promotion" and "Financial Assistance". These categories
+     can help you keep track of your coupon codes.
+   * **Valid from** and **Valid until**: The dates and times when the discount
+     or enrollment code is valid for use. The time zone is set to Universal
+     Coordinated Time (UTC). You can edit these fields after you create the
+     coupon.
    * **Discount Value**: This field is only visible if you select **Discount
      Code** for **Code Type**. Enter the percent or U.S. dollar amount of the
-     discount that you want to offer, then select **Percent** or **Fixed**.
+     discount that you want to offer, then select **Percent** or **Fixed**. Do
+     not add a percent sign or a dollar sign.
+   * **Usage Limitations**: The way the discount or enrollment codes that are
+     associated with your coupon can be used. Options are **Can be used once by
+     one customer**, **Can be used once by multiple customers**, or **Can be
+     used multiple times by multiple customers**.
+   * **Number of codes**: This field is visible if you select **Can be used
+     once by one customer**. This value specifies the number of individual
+     discount or enrollment codes you want to create. The value must be 1 or
+     greater. Make sure that you create enough discount or enrollment codes so
+     that each person receives one code.
+   * **Code**: This field is visible if you select **Can be used once by
+     multiple customers** or **Can be used multiple times by multiple
+     customers**.
+
+     * If you select **Can be used once by multiple customers**, leave this
+       field empty. The system generates the discount or enrollment code for
+       you when you select **Create Coupon**.
+
+     * If you select **Can be used multiple times by multiple customers**, you
+       can either enter a value in this field or leave it empty. You can enter
+       alphanumeric characters as well as special characters such as
+       underscores (_). For example, you can enter ``HOLIDAY_15``. If you leave
+       this field empty, the system generates the discount or enrollment code
+       for you.
+
+   * **Client**: The name of the organization that you create the codes for.
+     This organization receives an invoice for the codes you create.
 
 #. (Optional) On the **Create New Coupon** page, enter the following
    information. All of these fields are optional.
@@ -69,30 +124,7 @@ You create coupons by using the coupon administration tool, which is located at
    * **Note**: Any additional information that you want to add to your coupon,
      such as why the coupon was created. The note is visible on the coupon page
      in the coupon administration tool and in the .csv file for the coupon. It
-     is not visible to the learner.
-   * **Usage Limitations**: The way your coupon can be used. Options are
-     **Can be used once by one customer**, **Can be used once by multiple
-     customers**, or **Can be used multiple times by multiple customers**.
-   * **Number of codes**: This field is visible if you select **Can be used
-     once by one customer**. This value specifies the number of individual
-     codes you want to create. Make sure that you create enough codes so that
-     each person receives one code.
-   * **Code**: This field is visible if you select **Can be used once by
-     multiple customers** or **Can be used multiple times by multiple
-     customers**.
-
-     * If you select **Can be used once by multiple customers**, leave this
-       field empty. The system generates the code for you when you select
-       **Create Coupon**.
-
-     * If you select **Can be used multiple times by multiple customers**, you
-       can either enter a value in this field or leave it empty. You can enter
-       alphanumeric characters as well as special characters such as
-       underscores (_). For example, you can enter ``HOLIDAY_15``. If you leave
-       this field empty, the system generates a code for you.
-
-   * **Client**: The name of the organization that you create the codes for.
-     This organization receives an invoice for the codes you create.
+     is not visible to learners.
    * **Total Value of Coupon**: The value of all of the codes and course seats
      that are associated with this coupon, calculated as a product of the
      number of discount or enrollment codes, the number of course seats that
@@ -101,15 +133,19 @@ You create coupons by using the coupon administration tool, which is located at
    * **Total to Invoice to Client**: The amount that the client pays for this
      coupon. If this value is the same as the value for **Total Value of
      Coupon**, you can leave this field blank. If you want to invoice the
-     client for a different amount, enter that amount in this field.
+     client for a different amount, enter the amount to invoice the client in
+     this field.
 
 #. Select **Create Coupon**.
 
-When you select **Create Coupon**, a page for your coupon opens. This page
-lists the information for your coupon, including any individual discount or
-enrollment codes that the system generated as well as the URLs where users can
-redeem each discount or enrollment code. To download a .csv file that lists
-this information and additional information, select **Download**.
+When you select **Create Coupon**, the system generates one or more discount or
+enrollment codes as well as the URLs where users can redeem these codes. When
+the system has finished generating the coupon, a page for the coupon opens.
+This page lists the information for your coupon, including all discount or
+enrollment codes for the coupon, URLs where users can redeem the codes, dates
+the coupon is valid, and the course the coupon applies to. To download a .csv
+file that lists this information and additional details for the coupon, select
+**Download**.
 
 
 ************
@@ -134,7 +170,7 @@ You edit coupons by using the coupon administration tool.
    you want.
 #. Select **Save Changes**.
 
-.. _Download Coupon Code Information:
+.. _Download Coupon Information:
 
 ***********************************
 Download Coupon Information
@@ -153,13 +189,14 @@ the URL where a user can redeem each code.
 #. On the page for the coupon, select **Download**. Your .csv file begins
    downloading automatically.
 
+.. _Distribute Coupon Codes:
 
 ***************************************
 Distribute Coupon Codes to Learners
 ***************************************
 
-Learners redeem coupon codes, whether the coupon code is a discount code or an
-enrollment code, in several ways.
+You can distribute coupon codes to learners in several ways, whether the coupon
+code is a discount code or an enrollment code.
 
 * You provide a coupon code that they enter on the **Checkout** page for the
   verified or professional certificate track. You might also provide the URL
@@ -228,13 +265,18 @@ administration tool, follow these steps.
    * For a redeem endpoint, copy the URL in the **Redemption URL** column, and
      replace ``offer`` in the URL with ``redeem``.
 
+     For example, if the URL in the **Redemption URL** column is
+     ``http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5``, you change
+     the URL to
+     ``http://localhost:8002/coupons/redeem/?code=ZDPC3AQV3732RQT5``.
+
 
 Find a Code or URL in a Downloaded File
 ***************************************
 
 To find a coupon code or URL in the .csv file for a coupon, follow these steps.
 
-#. :ref:`Download a .csv file <Download Coupon Code Information>` that lists
+#. :ref:`Download a .csv file <Download Coupon Information>` that lists
    the information for your coupon, and then open the .csv file.
 #. In the .csv file, locate the information that you want.
 
@@ -246,6 +288,11 @@ To find a coupon code or URL in the .csv file for a coupon, follow these steps.
    * For a redeem endpoint, copy the URL in the **URL** column, and replace
      ``offer`` in the URL with ``redeem``.
 
+     For example, if the URL in the **URL** column is
+     ``http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5``, you change
+     the URL to
+     ``http://localhost:8002/coupons/redeem/?code=ZDPC3AQV3732RQT5``.
+
 
 .. _Send an Email Message:
 
@@ -253,16 +300,22 @@ To find a coupon code or URL in the .csv file for a coupon, follow these steps.
 Send an Email Message
 ===========================
 
-After you determine the coupon code or URL that you want to use, you provide
-that information in an email message. When you send the message, keep the
-following best practices in mind.
+After you locate the coupon code or URL that you want to use, you provide that
+information in an email message to potential learners. When you send the
+message, keep the following best practices in mind.
 
-* If you send a coupon code for the learner to use on the **Checkout** page,
+* If you send a coupon code for a learner to use on the **Checkout** page,
   edX recommends that you include the About page URL for the course as well as
-  the coupon code to help learners enroll more easily.
-* If you want to send a redeem endpoint, you must change the URL from the
-  **Redemption URL** or **URL** column. In the URL, change the word ``offer``
-  to ``redeem``. Do not make any other changes to the URL.
+  the coupon code to help the learner enroll more easily.
+
+* If you send a redeem endpoint, you must change the URL from the **Redemption
+  URL** or **URL** column. In the URL, change the word ``offer`` to ``redeem``.
+  Do not make any other changes to the URL.
+
+  For example, if the URL in the **Redemption URL** column or the **URL**
+  column is ``http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5``, you
+  change the URL to
+  ``http://localhost:8002/coupons/redeem/?code=ZDPC3AQV3732RQT5``.
 
 .. _Example Email Messages:
 
@@ -279,9 +332,9 @@ Learners Enter a Coupon Code on the Checkout Page
 
  Dear learner,
 
- You have received a discount <or an enrollment> code for edX101: Overview of
- Creating an edX Course. For more information about the course, see
- https://www.edx.org/course/overview-creating-edx-course-edx-edx101.
+ This message includes a discount <or an enrollment> code for  edX101: Overview
+ of Creating an edX Course. For more information about the course, see
+ https://www.edx.org/course/overview- creating-edx-course-edx-edx101.
 
  To redeem this code, sign up for a verified <or professional> certificate, and
  then enter the following coupon code in the **Coupon Code** field on the
