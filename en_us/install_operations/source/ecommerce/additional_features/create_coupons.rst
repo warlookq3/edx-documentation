@@ -1,8 +1,8 @@
-.. _Create Coupons:
+.. _Creating and Managing Coupons:
 
-######################
-Creating Coupons
-######################
+##################################
+Creating and Managing Coupons
+##################################
 
 .. This feature is not in Dogwood.
 
@@ -35,19 +35,11 @@ page, and the system creates the coupon and its associated discount or
 enrollment codes automatically. For more information, see :ref:`Create
 Coupons`.
 
-After you create coupons, you distribute the discount or enrollment codes for
-that coupon using email. Learners use the codes on the course **Checkout** page
-or at specific URLs that you provide. The URL can be for an *offer landing
-page* or for a *redeem endpoint*. For more information, see
+After you create coupons, you use email to distribute the discount or
+enrollment codes for that coupon. Learners use the codes on the course
+**Checkout** page or at specific URLs that you provide. The URL can be for an
+*offer landing page* or for a *redeem endpoint*. For more information, see
 :ref:`Distribute Coupon Codes`.
-
-When you create a coupon, the E-Commerce service generates an order. The
-Invoice Payment Processor module records these orders and assumes out-of-band
-payment for the coupons. The Invoice Payment Processor module also records
-the transaction in the Invoice table for later reconciliation.
-
-For more information about the E-Commerce service, see :ref:`Adding Ecommerce
-to the Open edX Platform`.
 
 .. _Create Coupons:
 
@@ -147,6 +139,7 @@ the coupon is valid, and the course the coupon applies to. To download a .csv
 file that lists this information and additional details for the coupon, select
 **Download**.
 
+.. _Edit Coupons:
 
 ************
 Edit Coupons
@@ -169,6 +162,8 @@ You edit coupons by using the coupon administration tool.
 #. In the **Valid from** or **Valid until** field, enter the date and time that
    you want.
 #. Select **Save Changes**.
+
+
 
 .. _Download Coupon Information:
 
@@ -332,7 +327,7 @@ Learners Enter a Coupon Code on the Checkout Page
 
  Dear learner,
 
- This message includes a discount <or an enrollment> code for  edX101: Overview
+ This message includes a discount <or an enrollment> code for edX101: Overview
  of Creating an edX Course. For more information about the course, see
  https://www.edx.org/course/overview- creating-edx-course-edx-edx101.
 
@@ -354,8 +349,8 @@ Learners Visit an Offer Landing Page
 
  Dear learner,
 
- You have received a discount <or an enrollment> code for edX101: Overview of
- Creating an edX Course. To redeem this code and enroll in the course, visit
+ This message includes a discount <or an enrollment> code for edX101: Overview
+ of Creating an edX Course. To redeem this code and enroll in the course, visit
  the following URL:
 
  http://localhost:8002/coupons/offer/?code=ZDPC3AQV3732RQT5
@@ -371,8 +366,8 @@ Learners Go to a Redeem Endpoint
 
  Dear learner,
 
- You have received a discount <or an enrollment> code for edX101: Overview of
- Creating an edX Course. To redeem this code and enroll in the course, visit
+ This message includes a discount <or an enrollment> code for edX101: Overview
+ of Creating an edX Course. To redeem this code and enroll in the course, visit
  the following URL:
 
  http://localhost:8002/coupons/redeem/?code=ZDPC3AQV3732RQT5
@@ -380,3 +375,27 @@ Learners Go to a Redeem Endpoint
  We look forward to learning with you!
 
  The edX101 course team
+
+.. _Deactivate Coupons:
+
+************************
+Deactivate Coupons
+************************
+
+To deactivate a coupon, change the **Valid from** and **Valid until** date
+fields so that both dates are in the past. For more information, see :ref:`Edit
+Coupons`.
+
+.. _Track and Process Coupons:
+
+**************************
+Track and Process Coupons
+**************************
+
+When you create a coupon, the E-Commerce service generates an order. The
+Invoice Payment Processor module records these orders and assumes out-of-band
+payment for the coupons. The Invoice Payment Processor module also records
+the transaction in the Invoice table for later reconciliation.
+
+For more information about the E-Commerce service, see :ref:`Adding Ecommerce
+to Open edX`.

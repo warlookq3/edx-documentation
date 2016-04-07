@@ -1,3 +1,5 @@
+.. _Adding Ecommerce to Open edX:
+
 ##########################################
 Adding Ecommerce to the Open edX Platform
 ##########################################
