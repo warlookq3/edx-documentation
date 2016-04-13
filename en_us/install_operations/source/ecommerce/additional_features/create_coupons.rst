@@ -16,6 +16,12 @@ This topic covers coupons and their associated coupon codes.
 Overview
 **********
 
+*********
+*********
+Coupon codes can only apply to one course
+*********
+*********
+
 You can use coupons to provide discounted or free course enrollments to your
 learners. Each coupon consists of one or more *coupon codes* for learners to
 use. Two types of coupon codes are available.
@@ -86,12 +92,19 @@ the coupon administration tool, which is located at
    * **Usage Limitations**: The way the discount or enrollment codes that are
      associated with your coupon can be used. Options are **Can be used once by
      one customer**, **Can be used once by multiple customers**, or **Can be
-     used multiple times by multiple customers**.
-   * **Number of codes**: This field is visible if you select **Can be used
-     once by one customer**. This value specifies the number of individual
-     discount or enrollment codes you want to create. The value must be 1 or
-     greater. Make sure that you create enough discount or enrollment codes so
-     that each person receives one code.
+     used multiple times by multiple customers**. Depending on what you select
+     for this field, one of the following additional fields appears.
+
+     * **Number of codes**: This field is visible if you select **Can be used
+       once by one customer**. This value specifies the number of individual
+       discount or enrollment codes you want to create. The value must be 1 or
+       greater. Make sure that you create enough discount or enrollment codes
+       so that each person receives one code.
+     * **Number of Code Usages**: This field is visible if you select **Can be
+       used once by multiple customers**. This value specifies the number of
+       times that different customers can apply the coupon code. Each customer
+       can use the coupon code only one time. This value must be 1 or greater.
+
    * **Code**: This field is visible if you select **Can be used once by
      multiple customers** or **Can be used multiple times by multiple
      customers**.
@@ -183,6 +196,51 @@ the URL where a user can redeem each code.
    and then select the name of the coupon.
 #. On the page for the coupon, select **Download**. Your .csv file begins
    downloading automatically.
+
+
+===========================
+Review Coupon Information
+===========================
+
+This .csv file contains important information about your coupon. Some of this
+information is described in this section.
+
+(Are all columns the same for single-use and multi-use coupons?)
+
+* Row 1 contains the name of each column.
+* Row 2 contains information for the coupon as a whole, instead of information
+  for each individual enrollment or discount code that has been redeemed.
+
+  * The **Maximum Coupon Usage** indicates the number of times that the
+    discount code or enrollment code that is associated with the coupon can be
+    used. For single-use coupons, this value is 1. For multi-use coupons, this
+    is the value that you specified in the **Number of Code Usages** field.
+  * The **Redemption Count** column in row 2 indicates the number of times the
+    coupon has been redeemed. The initial value is 0, and the value is
+    incremented each time that a discount code or enrollment code for the
+    coupon is redeemed.
+  * For multi-use coupon codes, the **Order Number**, **Redeemed By ID**,
+    and **Redeemed By Username** columns do not apply to row 2. These columns
+    are empty.
+
+* Row 3 and any additional rows contain information about the individual use of
+  enrollment or discount codes. For single-use coupon codes, each row
+  represents a separate enrollment or discount code. For multi-use coupon
+  codes, each row represents one time the coupon code was redeemed.
+
+  Row 3 and additional rows contain the following information.
+
+  * **Redemption Count**: The value in this colum for rows 3 and above is 1 for
+    both single-use and multi-use coupons.
+  * **Order Number**: The order number associated with the redemption of the
+    enrollment or discount code.
+  * **Redeemed By ID**: The ID number of the user who redeemed the enrollment
+    or discount code. (Does the user ID number show up elsewhere in the
+    platform? Is this a number assigned to a particular user, or is it just the
+    first, second, third, etc. person who redeemed the code?)
+  * **Redeemed By Username**: The username of the user who redeemed the
+    enrollment or discount code.
+  * **Partner**: (How is this populated?)
 
 .. _Distribute Coupon Codes:
 
