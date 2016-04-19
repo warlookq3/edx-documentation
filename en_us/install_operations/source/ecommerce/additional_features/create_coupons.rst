@@ -34,7 +34,6 @@ Both discount codes and enrollment codes can be used in the following ways.
 
 * One time by one user.
 * One time by multiple users.
-* Multiple times by multiple users.
 
 To create a coupon, you specify several options on the **Create New Coupon**
 page, and the system creates the coupon and its associated discount or
@@ -66,7 +65,7 @@ the coupon administration tool, which is located at
      you can only change the **Valid from** and **Valid until** dates.
 
    * **Name**: The name you want to give the coupon, such as "Holiday 2015 15%
-     Promotion". The name must have fewer than 255 characters.
+     Promotion". The name must have fewer than 30 characters.
    * **Course ID**: The ID of the course that you want to provide the coupon
      for. To find the course ID, open the course administration tool at
      ``http://localhost:8002/courses``, select your course name in the list of
@@ -91,37 +90,27 @@ the coupon administration tool, which is located at
      not add a percent sign or a dollar sign.
    * **Usage Limitations**: The way the discount or enrollment codes that are
      associated with your coupon can be used. Options are **Can be used once by
-     one customer**, **Can be used once by multiple customers**, or **Can be
-     used multiple times by multiple customers**. Depending on what you select
-     for this field, one of the following additional fields appears.
+     one customer** or **Can be used once by multiple customers**. Depending on
+     what you select for this field, one of the following additional fields
+     appears.
 
-     * **Number of codes**: This field is visible if you select **Can be used
+     * **Number of Codes**: This field is visible if you select **Can be used
        once by one customer**. This value specifies the number of individual
        discount or enrollment codes you want to create. The value must be 1 or
        greater. Make sure that you create enough discount or enrollment codes
        so that each person receives one code.
-     * **Number of Code Usages**: This field is visible if you select **Can be
-       used once by multiple customers**. This value specifies the number of
+     * **Maximum Number of Usages**: This field is visible if you select **Can
+       be used once by multiple customers**. This value specifies the number of
        times that different customers can apply the coupon code. Each customer
        can use the coupon code only one time. This value must be 1 or greater.
 
-   * **Code**: This field is visible if you select **Can be used once by
-     multiple customers** or **Can be used multiple times by multiple
-     customers**.
-
-     * If you select **Can be used once by multiple customers**, leave this
-       field empty. The system generates the discount or enrollment code for
-       you when you select **Create Coupon**.
-
-     * If you select **Can be used multiple times by multiple customers**, you
-       can either enter a value in this field or leave it empty. You can enter
-       alphanumeric characters as well as special characters such as
-       underscores (_). For example, you can enter ``HOLIDAY_15``. If you leave
-       this field empty, the system generates the discount or enrollment code
-       for you.
+   * **Code**: You can either leave this field empty or specify a discount or
+     enrollment code. If you leave the field empty, the system generates the
+     discount or enrollment code for you when you select **Create Coupon**.
 
    * **Client**: The name of the organization that you create the codes for.
-     This organization receives an invoice for the codes you create.
+     Note that the current system cannot automatically send this organization
+     an invoice for the codes you create.
 
 #. (Optional) On the **Create New Coupon** page, enter the following
    information. All of these fields are optional.
@@ -136,10 +125,9 @@ the coupon administration tool, which is located at
      each code applies to, and the discount amount per course seat. The system
      calculates this value automatically, and the value cannot be changed.
    * **Total to Invoice to Client**: The amount that the client pays for this
-     coupon. If this value is the same as the value for **Total Value of
-     Coupon**, you can leave this field blank. If you want to invoice the
-     client for a different amount, enter the amount to invoice the client in
-     this field.
+     coupon. If you do not want to send an invoice to the client, you can leave
+     this field blank. If you want to invoice the client for a different
+     amount, enter the amount to invoice the client in this field.
 
 #. Select **Create Coupon**.
 
