@@ -9,26 +9,25 @@ own text.}
 
 {Place the introductory statement here.}
 
-{Optional: include an additional paragraph with a link to a related topic.
-Alternative: include a list of links to related topics.}
+{Include a contents directive. This directive resolves to an unordered list of links to the next-level headings in this file.}
 
-* {link}
-* {link}
 
-******************************
-{Optional Example}
-******************************
-
-{Description}
+.. contents::
+  :local:
+  :depth: 1
 
 ******************************
-{Optional Subheading} 
+{Optional Overview}
 ******************************
 
 {Description}
 
 ******************************
-{Optional Subheading}
+{Optional Procedure}
 ******************************
 
-{Description}
+Before you {complete task, prerequisites if any}.
+
+To {complete task}, follow these steps.
+
+#. {first step}.

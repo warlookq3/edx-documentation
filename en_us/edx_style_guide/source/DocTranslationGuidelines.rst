@@ -28,7 +28,7 @@ file<Anchor For ExampleRSTFile>`.
 
 
 *************************
-What To Translate
+What to Translate
 *************************
 
 In addition to obvious text, do translate the following items.
@@ -37,25 +37,19 @@ In addition to obvious text, do translate the following items.
   ``.. warning::``. Be careful to wrap and indent lines correctly, as described
   in :ref:`Work with edX Documentation Source Files`.
 
-* Link text in inline links. Distinguish between anchor text and link text.
-  Only translate link text; if you translate anchor text, the link will be
-  broken.
+* Link text in inline links. Be sure to identify the difference between link
+  text and anchor text if both are present in a cross reference. Only translate
+  link text; if you translate anchor text, the link will be broken.
 
-  For example, in
+  For example, in ``:ref:`Work with edX Documentation Source Files``` the text
+  between the accent characters (`) is the anchor text and should not be
+  translated.
 
-  ``:ref:`Work with edX Documentation Source Files``` or
-  ```Work with edX Documentation Source Files`_``
-
-  the text between the grave accent
-  characters (`) is actual anchor text and should not be translated.
-
-  However, in the example
-
-  ``:ref:`this is link text<Work with edX Documentation Source Files>```
-
-  the actual anchor text is between the carets and should not be
-  translated. The text string between the first grave accent character and the
-  first caret ("this is link text") is link text, and should be translated.
+  However, in the example ``:ref:`this is link text<Work with edX Documentation
+  Source Files>``` link text is also present. The anchor text is between the
+  angle brackets and should not be translated. The text string between the
+  first grave accent character and the opening bracket ("this is link text") is
+  link text, and should be translated.
 
 * Alt text in image references. Translate text following the tag ``:alt:`` so
   that a useful description is provided for screen readers.
@@ -64,9 +58,7 @@ In addition to obvious text, do translate the following items.
 
    .. image:: ../../../data/source/Images/DataCzar_Initialization.png
       :width: 100
-      :alt: Flowchart showing process for initializing a data czar
-
-
+      :alt: Flowchart showing process for initializing a data czar.
 
 
 *****************************
@@ -80,7 +72,7 @@ Do not translate or alter any of the following elements.
 * The filenames and locations of any image files in the repository. If you
   replace any original source images with localized images, make sure the
   replacement image files have exactly the same filenames, and replace them in
-  the same Images folder location, so that image links within the
+  the same images folder location, so that image links within the
   documentation are not broken.
 
 * Words in file paths in cross-references or image references.
@@ -96,13 +88,14 @@ Do not translate or alter any of the following elements.
 * Variables, database field names, or code examples that are tagged with
   monospace code font (placed between double grave accent characters).
 
-  For example, in the following sentence, do not translate the event names that are between pairs of double grave accent characters.
+  For example, in the following sentence, do not translate the event names that
+  are between pairs of double grave accent characters.
 
   The edX mobile app for iOS now emits ````play_video````, ````pause_video````,
   ````stop_video````, ````load_video````, and ````seek_video```` events.
 
 
-For information about working with edX Documentation source files, see
+For information about working with edX documentation source files, see
 :ref:`Work with edX Documentation Source Files`.
 
 For information about the documentation translation process, see

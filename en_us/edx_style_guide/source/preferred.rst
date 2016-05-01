@@ -4,117 +4,82 @@
 Preferred Usage
 #################
 
-* Write short, clear sentences of no more than 20 words. Avoid dependent
-  clauses.
-
-* Beware of fused sentences. Use commas to break sentences into component
-  phrases. For example, change "Locate the course you want to re-run and click
-  **Re-Run Course**." to "Locate the course you want to re-run, and then
-  select **Re-Run Course**."
-
-* Do not use "the following" as a noun or to introduce a list.
-
-* Use "have to," "must," or "EdX recommends" rather than "should."
-
-* Avoid redundancy in phrases.
-
-  * Create a new {noun} --> prefer Create a {noun}
-
-  * Delete or edit an existing {noun} --> prefer Delete or edit a {noun}
-
-
 .. list-table::
   :widths: 20 80
 
-  * - Abbreviations
-    - Only use for standards of measurement, such as kB.
-
-      Do not use Latin abbreviations. For example, replace "etc." with "and so
-      on".
-
-      Do not use clipped terms, such as spec, quotes, or rep. Exception: "The
-      edX mobile app" is the correct term.
-
-  * - Active voice
-    - Use active voice as much as possible. For example, rephrase "These events
-      are emitted by the browser when a user selects **Save**." as "The browser
-      emits these events when a user select **Save**."
-
-  * - Acronyms
-    - Always spell out the term, then follow it with the acronym in
-      parentheses, the first time it is mentioned in an .rst file.
-
-      For example, "Students see your course in the learning management system
-      (LMS)."
-
+  * - Can, Might, and May
+    - Use the verb "can" to describe ability, capability, or capacity. Use
+      "might" to describe possibility or eventuality. Because "may" infers
+      permission, the edX documentation team prefers to use one of the other
+      two verbs.
   * - Capitalization
-    - Capitalize headings. Do not capitalize job titles, such as professor,
-      instructor, or program manager.
-  * - Caution block
-    - Do not use. Use a note block or a warning block instead.
+    - Use title capitalization for headings. When referring to elements in the
+      user interface, follow the capitalization that is used in the labels or
+      text.
+
+      Do not capitalize job titles, such as professor, instructor, or program
+      manager. Do not capitalize terms unless they are trademarks, such as
+      instructor dashboard or course about video.
   * - Contractions
     - Do not use.
   * - Cross-references
-    - Introduce stand-alone cross-references with "For more information, see
-      ``{topic name}``. (Do not use the more abrupt "See ``{topic name}``.")
-      An exception is in the Glossary, where cross-references to other entries
-      in the Glossary should use "See" (when there is no other information in
-      the current entry) or See Also (when the current entry is complete in
-      itself and you provide a cross-reference to a related entry).
+    - Introduce standalone cross-references to other edX topics with the
+      phrase, "For more information, see ``:ref:`{topic name}```". To include
+      more specific information about the material you are referencing, use the
+      expanded phrase, "For more information about {task or concept}, see
+      ``:ref:`{topic name}```".
 
-      For inline cross-references, create links to words in the sentence, but
-      don't use the name of the topic itself unless the capitalization works
-      with the sentence. For example: "You can use the ``:ref:`course launch
-      checklist<Course Launch Checklist>``` to verify that the course is
-      ready for release."
+      Exception: In the glossary, cross-references to other glossary entries
+      begin with, "See ``:ref:`{topic name}```" if the current entry consists
+      only of the cross reference. To refer to a related entry, use, "See also
+      ``:ref:`{topic name}```".
 
-      To promote a better experience for screen readers, provide the title of
-      the destination in each cross-reference link, and not just a URL. In
-      addition, avoid including multiple links to the same destination on a
-      single HTML page.
+      To include a cross-reference inline, extend the cross-reference to
+      include a phrase that makes sense in context. In this example, to create
+      a sentence with the correct capitalization, "course launch checklist" is
+      added to the cross-reference markup. "To verify that the course is ready
+      for release, you can use the ``:ref:`course launch checklist<Course
+      Launch Checklist>```."
+
+      For a cross-reference to an external resource, provide the title of the
+      destination, not just a URL. This style promotes a better experience
+      for those using screen readers. In addition, avoid repeating links to the
+      same destination multiple times on a single HTML page.
+
+      Exception: use "edx.org" to refer to the https://www.edx.org website.
 
   * - Dates
-    - Format dates as ``DD Mon YYYY`` or ``DD Month YYYY``. For example: ``11
-      Jan 2015``
-  * - File types
-    - Include the period before the file type abbreviation, and make the file
-      type lowercase. For example: "Download a .csv file on the Instructor
-      Dashboard." If necessary, explain the file type. For example: "A Word
-      (.doc) file."
-  * - Headings
-    - Use a gerund to start the title of top level section headings. For topics
-      that introduce a concept, use a gerund to start the title. For topics
-      that describe a procedure, use an imperative verb to start the title. Do
-      not use nouns or noun phrases.
+    - Format dates as ``DD Mon YYYY`` or ``DD Month YYYY``. For example, ``11
+      Jan 2015``. Do not use both date formats within the same .rst file.
+  * - First person
+    - Do not use "I" or "me" unless you are following the text of a user
+      interface label or message. Avoid using "we". If edX or another entity
+      has established a best practice, identify the the entity that recommends
+      that practice by name.
+  * - Heading style
+    - Use title case for all headings. For a top-level section heading and for
+      topics that introduce concepts, use a verb in gerund form to start the
+      title. For topics that describe a procedure, use an imperative verb to
+      start the title.
+
+      For example, "Adding Course Updates and Handouts", "Adding a Course
+      Update", and "Identify a Course Handout".
+
+      Avoid the use of nouns or noun phrases without a verb as headings.
+
   * - Hyphenation
-    - Minimize the use of hyphenation and present combinations as either two
-      separate words or a single word. Use hyphens only when the meaning is
-      unclear without them. For exceptions to this rule, see the :ref:`word
-      list<Word List>`.
+    - Minimize the use of hyphenated compounds. Present compound words as
+      either two separate words or a single word. Use hyphens only when the
+      meaning is unclear without them. For exceptions to this rule, see the
+      :ref:`word list<Word List>`.
   * - Images
-    - Minimize use of screen shots. For more information, see :ref:`Images`.
-
+    - Minimize the use of screen shots. For more information, see
+      :ref:`Images`.
   * - Lists
-    - Introduce an unordered list with a complete sentence that ends in a
-      period. See also "steps."
-
-      Each item in the list should be able to stand on its own, rather than
-      complete an introductory sentence fragment. Present listed items as
-      complete sentences with terminal periods, unless each item is short
-      (three words or fewer).
-
-  * - Mood
-    - Use the indicative and imperative moods. Avoid the subjunctive mood.
-  * - Notes
-    - Use when you want the user to pay special attention to an instruction or
-      idea.
-  * - Numbers
-    - Spell out numbers from zero to nine and use numerals for 10 and above,
-      even in the same sentence. For example: "You may select five, six, or 12
-      users."
-  * - Passive voice
-    - Do not use unless absolutely necessary. It frequently makes the actor
-      unclear.
+    - Introduce a list with a complete sentence that ends in a period. Do not
+      use "the following" as a noun or to introduce a list. Instead, include
+      the noun. For example, "The .csv file includes the following columns." or
+      "When pretty printed, this comment has the following format.""
   * - Pronouns
     - Avoid ambiguous pronouns such as all, each, many, several, some, that,
       them, these, those.
@@ -124,38 +89,21 @@ Preferred Usage
       Avoid em dashes. Putting non-restrictive relative clauses into separate
       sentences leads to simpler, clearer writing.
 
-      Do not use smart quotes or smart apostrophes. Use the straight versions.
+      Do not use smart quotes or smart apostrophes. Use the straight versions
+      of these marks.
 
+  * - Redundancy
+    - Avoid including unnecessary words. For example, instead of "Create a new
+      {noun}", use "Create a {noun}", and instead of "Delete or edit an
+      existing {noun}", use "Delete or edit a {noun}."
   * - Steps
-    - To introduce an ordered list of procedural steps, use "To do this,
-      follow these steps." Note the complete sentence and terminal period.
-
-      If you are describing a procedure for the user to follow, use numbered
-      steps instead of writing out the procedure as a narrative.
-
-      If you are explaining a problem that occurs, and the problem is
-      relatively simple, use a narrative. For example: "When you go to the
-      Instructor Dashboard, download a .csv file of your learners, and then
-      open the .csv file, you may see incorrect information in the file." If
-      the problem is more complex, write it out as steps.
-
+    - To introduce an ordered list of procedural steps, use "To {verb task},
+      follow these steps." Note the complete sentence and terminal period. For
+      example, "To add a course update, follow these steps.
   * - Tables
-    - When you include a table, be sure to include a heading row or column.
-  * - Tense
-    - Prefer the present tense, particularly for procedural steps.
-  * - UI terms
-    - When you describe UI elements, leave out the UI element name. For
-      example, type "click OK" instead of "click the OK button."
-
-      If the UI label has an error, such as a spelling mistake, write the word
-      or phrase correctly in the documentation.
-
-  * - Warnings
-    - Only use when a user might have significant problems, such as data loss
-      or a security vulnerability.
-  * - White space
-    - Plan for the expansion of text, particularly in images such as
-      flowcharts.
+    - When you include a table, be sure to include a heading row. In addition,
+      consider whether a stub column is appropriate. The heading row and stub
+      column provide useful context for users of screen readers.
   * - Word choice
     - See the :ref:`Word List` for our preferred terminology. Avoid jargon,
       colloquialisms, and humor.
@@ -166,6 +114,3 @@ Preferred Usage
       Be careful of commonly used phrases that introduce ambiguity. For
       example, instead of "When the process completes..." use "After the
       process completes..."
-
-
-
