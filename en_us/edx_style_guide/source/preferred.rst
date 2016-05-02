@@ -9,7 +9,7 @@ Preferred Usage
 
   * - Can, Might, and May
     - Use the verb "can" to describe ability, capability, or capacity. Use
-      "might" to describe possibility or eventuality. Because "may" infers
+      "might" to describe possibility or eventuality. Because "may" implies
       permission, the edX documentation team prefers to use one of the other
       two verbs.
   * - Capitalization
@@ -31,7 +31,7 @@ Preferred Usage
 
       Exception: In the glossary, cross-references to other glossary entries
       begin with, "See ``:ref:`{topic name}```" if the current entry consists
-      only of the cross reference. To refer to a related entry, use, "See also
+      only of the cross reference. To refer to a related entry, use "See also
       ``:ref:`{topic name}```".
 
       To include a cross-reference inline, extend the cross-reference to
@@ -57,7 +57,7 @@ Preferred Usage
       has established a best practice, identify the the entity that recommends
       that practice by name.
   * - Heading style
-    - Use title case for all headings. For a top-level section heading and for
+    - Use title case for all headings. For a top level section heading and for
       topics that introduce concepts, use a verb in gerund form to start the
       title. For topics that describe a procedure, use an imperative verb to
       start the title.

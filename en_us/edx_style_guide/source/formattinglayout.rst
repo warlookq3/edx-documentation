@@ -9,8 +9,7 @@ description and complete documentation, see `reStructuredText`_ .
 
 For a sample .rst file that contains examples of the markup used by the edX
 documentation team, see the
-``edx-documentation/en_us/edx_style_guide/source/Format Cheat Sheet.rstnouse``
-file.
+``edx-documentation/en_us/edx_style_guide/source/ExampleRSTFile.rst`` file.
 
 .. list-table::
   :widths: 15 15 15 25
@@ -22,10 +21,10 @@ file.
   * - Book or guide name
     - ``*italic*``
     - *Building and Running an edX Course*
-    - When providing the title in addition to a cross-reference to a specific
-      section or topic in the guide, link the section or topic and then place
-      the name of the guide in italics. Otherwise, make the title the cross
-      reference link instead of presenting it in italics.
+    - When you provide the title of the guide in addition to a cross-reference
+      to a specific section or topic in the guide, link the section or topic
+      and then place the name of the guide in italics. Otherwise, make the
+      title the cross reference link instead of presenting it in italics.
 
       Translator guidance is that strings in italic font should be translated.
 

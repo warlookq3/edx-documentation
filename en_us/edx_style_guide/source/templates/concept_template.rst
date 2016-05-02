@@ -9,7 +9,8 @@ own text.}
 
 {Place the introductory statement here.}
 
-{Include a contents directive. This directive resolves to an unordered list of links to the next-level headings in this file.}
+{Include a contents directive. This directive resolves to an unordered list of
+links to the next level headings in this file.}
 
 
 .. contents::

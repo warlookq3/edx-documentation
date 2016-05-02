@@ -33,13 +33,15 @@ What to Translate
 
 In addition to obvious text, do translate the following items.
 
-* Note and Warning text. Translate text following the tags ``.. note::`` or
-  ``.. warning::``. Be careful to wrap and indent lines correctly, as described
-  in :ref:`Work with edX Documentation Source Files`.
+* The text of notes and warnings. Translate text following the tags ``..
+  note::``, ``.. important::``,  or ``.. warning::``. Be careful to wrap and
+  indent lines correctly, as described in :ref:`Work with edX Documentation
+  Source Files`.
 
-* Link text in inline links. Be sure to identify the difference between link
-  text and anchor text if both are present in a cross reference. Only translate
-  link text; if you translate anchor text, the link will be broken.
+* The link text in cross references. Link text is optional, so be sure to
+  identify the difference between link text and anchor text if both are present
+  in a cross reference. Only translate link text; if you translate anchor text,
+  the link will be broken.
 
   For example, in ``:ref:`Work with edX Documentation Source Files``` the text
   between the accent characters (`) is the anchor text and should not be
@@ -51,10 +53,10 @@ In addition to obvious text, do translate the following items.
   first grave accent character and the opening bracket ("this is link text") is
   link text, and should be translated.
 
-* Alt text in image references. Translate text following the tag ``:alt:`` so
+* The ``alt`` text for images. Translate text following the tag ``:alt:`` so
   that a useful description is provided for screen readers.
 
-  For example, ::
+  An example follows. ::
 
    .. image:: ../../../data/source/Images/DataCzar_Initialization.png
       :width: 100

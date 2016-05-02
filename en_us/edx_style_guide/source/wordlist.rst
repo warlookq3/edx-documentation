@@ -74,7 +74,7 @@ Word List
        "Third-party" is the adjective form: "third-party software".
    * - topic
      - In the edX guides, the concepts or procedures that are the
-       lowest-level contents of a section are referred to as topics.
+       lowest level contents of a section are referred to as topics.
    * - username
      - Use instead of "user name".
    * - XBlock
