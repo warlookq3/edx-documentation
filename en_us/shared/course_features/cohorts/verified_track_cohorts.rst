@@ -13,14 +13,16 @@ in the audit track.
    Let your partner manager know your plans as far in advance of the course
    start as possible.
 
+   If you want to use this feature in a course that is live, and
+   verified track learners might already have enrolled, contact your edX
+   partner manager to discuss configuration possibilities and how to migrate
+   existing verified track learners to the correct cohort.
+
    In addition, you must be aware of, and follow, the :ref:`requirements
    <Requirements for Verified Track Cohorts>` for using cohorts to deliver
    differentiated content to your verified track learners.
 
-.. note:: If you want to use this feature in a course that is live, and
-   verified track learners might already have enrolled, contact your edX
-   partner manager to discuss configuration possibilities and how to migrate
-   existing verified track learners to the correct cohort.
+.. note::
 
 
 .. contents::
