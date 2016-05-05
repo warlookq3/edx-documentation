@@ -17,7 +17,6 @@ Using the Course Catalog API, you can accomplish the following tasks.
   Catalogs>`
 * :ref:`Get information about a specific catalog <Get Information About a
   Specific Catalog>`
-* :ref:`Get a list of all courses in a catalog <Get a List of All Courses
-in a Catalog>`
+* :ref:`Get a list of all courses in a catalog <Get a List of All Courses in a Catalog>`
 
 For more information, see :ref:`Course Catalog API Reference`.

@@ -1,4 +1,4 @@
-.. _Get Credentials:
+.. _Get Credentials for the EdX Course Catalog API:
 
 ################################################
 Get Credentials for the EdX Course Catalog API
