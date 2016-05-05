@@ -56,19 +56,19 @@ Response Values
    :widths: 25 20 80
    :header-rows: 1
 
-    * - ``count``
-      - integer
-      - The number of available catalogs.
-    * - ``next``
-      - string
-      - The URL for the next page of results.
-    * - ``previous``
-      - string
-      - The URL for the previous page of results.
-    * - ``results``
-      - array
-      - Information about the current page of catalogs. This array includes the
-        following response values.
+   * - ``count``
+     - integer
+     - The number of available catalogs.
+   * - ``next``
+     - string
+     - The URL for the next page of results.
+   * - ``previous``
+     - string
+     - The URL for the previous page of results.
+   * - ``results``
+     - array
+     - Information about the current page of catalogs. This array includes the
+       following response values.
 
 The ``results`` array contains the following response values.
 
@@ -76,21 +76,21 @@ The ``results`` array contains the following response values.
    :widths: 25 20 80
    :header-rows: 1
 
-    * - ``id``
-      - integer
-      - The catalog identifier.
-    * - ``name``
-      - string
-      - The name of the catalog.
-    * - ``query``
-      - string
-      - The query that the server uses to retrieve catalog contents.
-    * - ``courses_count``
-      - integer
-      - The number of courses this catalog contains.
-    * - ``viewers``
-      - array[string]
-      - Usernames of users with explicit access to view this catalog.
+   * - ``id``
+     - integer
+     - The catalog identifier.
+   * - ``name``
+     - string
+     - The name of the catalog.
+   * - ``query``
+     - string
+     - The query that the server uses to retrieve catalog contents.
+   * - ``courses_count``
+     - integer
+     - The number of courses this catalog contains.
+   * - ``viewers``
+     - array[string]
+     - Usernames of users with explicit access to view this catalog.
 
 ======================================================
 Example Response Showing a List of All Course Catalogs
