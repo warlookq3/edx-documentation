@@ -67,7 +67,8 @@ When you receive your approval email message from edX, follow these steps.
    required.
 
    * Name: The name of your application.
-   * Redirect URLs: ---
+   * Redirect URLs: The redirect URL or URLs that you want your application to
+     use.
 
 #. Select **Generate API client credentials**.
 
