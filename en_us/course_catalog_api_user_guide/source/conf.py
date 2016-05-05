@@ -11,7 +11,7 @@ html_theme_path = ['../../_themes']
 
 html_favicon = '../../_themes/edx_theme/static/css/favicon.ico'
 
-project = u'Building and Running an edX Course'
+project = u'EdX Course Catalog API User Guide'
 
 tags.add('Partners')
 

@@ -29,10 +29,10 @@ Method and Endpoint
    :widths: 20 80
    :header-rows: 1
 
-  * - Method
-    - Endpoint
-  * - GET
-    - ``/catalog/v1/catalogs/``
+   * - Method
+     - Endpoint
+   * - GET
+     - ``/catalog/v1/catalogs/``
 
 =====================
 Example Request
@@ -44,25 +44,53 @@ Example Request
 Response Values
 =====================
 
-Responses to GET requests for the edX Course Catalog API frequently contain the
-**results** response value. The **results** response value is a variable that
-represents the intended object from the GET request. For the ``GET
-/catalog/v1/catalogs/`` request, the **results** response value is an array
-that lists information about the catalogs that are listed on the current page.
+.. note::
+  Responses to GET requests for the edX Course Catalog API frequently contain
+  the **results** response value. The **results** response value is a variable
+  that represents the intended object from the GET request. For the ``GET
+  /catalog/v1/catalogs/`` request, the **results** response value is an array
+  that lists information about the catalogs that are listed on the current
+  page.
 
-* count (integer): The number of available catalogs.
-* next (string): The URL for the next page of results.
-* previous (string): The URL for the previous page of results.
-* results (array): Information about the current page of catalogs. This array
-  includes the following response values.
+.. list-table::
+   :widths: 25 20 80
+   :header-rows: 1
 
-  * id (integer): The catalog identifier.
-  * name (string): The name of the catalog.
-  * query (string): The query that the server uses to retrieve catalog
-    contents.
-  * courses_count (integer): The number of courses this catalog contains.
-  * viewers (array[string]): Usernames of users with explicit access to view
-    this catalog.
+    * - ``count``
+      - integer
+      - The number of available catalogs.
+    * - ``next``
+      - string
+      - The URL for the next page of results.
+    * - ``previous``
+      - string
+      - The URL for the previous page of results.
+    * - ``results``
+      - array
+      - Information about the current page of catalogs. This array includes the
+        following response values.
+
+The ``results`` array contains the following response values.
+
+.. list-table::
+   :widths: 25 20 80
+   :header-rows: 1
+
+    * - ``id``
+      - integer
+      - The catalog identifier.
+    * - ``name``
+      - string
+      - The name of the catalog.
+    * - ``query``
+      - string
+      - The query that the server uses to retrieve catalog contents.
+    * - ``courses_count``
+      - integer
+      - The number of courses this catalog contains.
+    * - ``viewers``
+      - array[string]
+      - Usernames of users with explicit access to view this catalog.
 
 ======================================================
 Example Response Showing a List of All Course Catalogs
@@ -116,10 +144,10 @@ Method and Endpoint
    :widths: 20 80
    :header-rows: 1
 
-  * - Method
-    - Endpoint
-  * - GET
-    - ``/catalog/v1/catalogs/{id}/``
+   * - Method
+     - Endpoint
+   * - GET
+     - ``/catalog/v1/catalogs/{id}/``
 
 =====================
 Example Request
@@ -203,11 +231,13 @@ Example Request
 Response Values
 =====================
 
-Responses to GET requests for the edX Course Catalog API frequently contain the
-**results** response value. The **results** response value is a variable that
-represents the intended object from the GET request. For the ``GET
-/catalog/v1/catalogs/{id}/courses/`` request, the **results** response value is
-an array that lists information about each individual course in the catalog.
+.. note::
+  Responses to GET requests for the edX Course Catalog API frequently contain
+  the **results** response value. The **results** response value is a variable
+  that represents the intended object from the GET request. For the ``GET
+  /catalog/v1/catalogs/{id}/courses/`` request, the **results** response value
+  is an array that lists information about each individual course in the
+  catalog.
 
 The ``GET /catalog/v1/catalogs/{id}/courses/`` request returns the following
 response values.

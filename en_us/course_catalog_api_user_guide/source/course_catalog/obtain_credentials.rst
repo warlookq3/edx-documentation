@@ -7,6 +7,12 @@ Get Credentials for the EdX Course Catalog API
 Your API client credentials consist of a client ID and a client secret. EdX
 generates your client credentials after you request access to the API.
 
+To obtain your client credentials, complete the following steps.
+
+.. contents::
+   :local:
+   :depth: 1
+
 .. _Obtain EdX User Account and Sign In:
 
 *****************************************

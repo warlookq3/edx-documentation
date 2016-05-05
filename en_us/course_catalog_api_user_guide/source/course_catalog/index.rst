@@ -1,8 +1,8 @@
 .. _Course Catalog API:
 
-#############################
-For Your Information
-#############################
+################################
+Using the EdX Course Catalog API
+################################
 
 .. toctree::
    :maxdepth: 2
