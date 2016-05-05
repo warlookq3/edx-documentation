@@ -1,13 +1,12 @@
-.. _Course Catalog API Catalogs Resource:
+.. _Course Catalog API Reference:
 
 ########################################
-Course Catalog API Catalogs Resource
+Course Catalog API Reference
 ########################################
 
 The Course Catalog API is currently at version 1.0.
 
-You can use the Course Catalog API Catalogs resource to accomplish the
-following tasks.
+You can use the Course Catalog API to accomplish the following tasks.
 
 .. contents::
    :local:
@@ -20,7 +19,7 @@ following tasks.
 Get a List of All Course Catalogs
 **************************************
 
-You can use the **Catalogs** resource to get a list of all course catalogs.
+You can use this API to get a list of all course catalogs.
 
 =====================
 Method and Endpoint
@@ -107,8 +106,7 @@ Response Body
 Get Information about a Specific Catalog
 *****************************************
 
-You can use the **Catalogs** resource to get information about a specific
-catalog.
+You can use this API to get information about a specific catalog.
 
 =====================
 Method and Endpoint
@@ -177,10 +175,10 @@ Response Body
 Get a List of All Courses in a Catalog
 **************************************
 
-You can use the **Catalogs** resource to get a list of all the active courses
-in a specified catalog, along with details about each course. Active courses
-are courses that are currently open for enrollment or that will open for
-enrollment in the future.
+You can use this API to get a list of all the active courses in a specified
+catalog, along with details about each course. Active courses are courses that
+are currently open for enrollment or that will open for enrollment in the
+future.
 
 =====================
 Method and Endpoint

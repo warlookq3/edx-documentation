@@ -13,24 +13,11 @@ API`.
 
 Using the Course Catalog API, you can accomplish the following tasks.
 
-.. list-table::
-   :widths: 20 10 70
-   :header-rows: 1
+* :ref:`Get a list of all available course catalogs <Get a List of All Course
+  Catalogs>`
+* :ref:`Get information about a specific catalog <Get Information About a
+  Specific Catalog>`
+* :ref:`Get a list of all courses in a catalog <Get a List of All Courses
+in a Catalog>`
 
-   * - Task
-     - Method
-     - Endpoint
-   * - :ref:`Get a list of all available course catalogs <Get a List of All
-     Course Catalogs>`
-     - GET
-     - /api/v1/catalogs/
-   * - :ref:`Get information about a specific catalog <Get Information About a
-     Specific Catalog>`
-     - GET
-     - /api/v1/catalogs/{id}/
-   * - :ref:`Get a list of all courses in a catalog <Get a List of All Courses
-     in a Catalog>`
-     - GET
-     - /api/v1/catalogs/{id}/courses/
-
-For more information, see :ref:`Course Catalog API Catalogs Resource`.
+For more information, see :ref:`Course Catalog API Reference`.
