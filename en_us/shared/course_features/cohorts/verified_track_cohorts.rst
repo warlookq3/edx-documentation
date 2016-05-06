@@ -85,7 +85,12 @@ group.
 
    * You must have exactly one cohort for verified track learners, and it must
      be manually assigned. You provide the name of this verified track cohort
-     to your partner manager and must not rename this cohort.
+     to your partner manager.
+
+   * After your partner manager configures your course for verified track
+     cohorting using the verified track cohort name that you provide, you
+     cannot disable cohorts, and you cannot rename the special verified track
+     cohort.
 
    For details, see :ref:`Requirements for Verified Track Cohorts`.
 
@@ -122,7 +127,12 @@ learners in each track using cohorts and content groups, follow these steps.
 
    * You must have exactly one cohort for verified track learners, and it must
      be manually assigned. You provide the name of this verified track cohort
-     to your partner manager and must not rename this cohort after doing so.
+     to your partner manager.
+
+   * After your partner manager configures your course for verified track
+     cohorting using the verified track cohort name that you provide, you
+     cannot disable cohorts, and you cannot rename the special verified track
+     cohort.
 
    For details, see :ref:`Requirements for Verified Track Cohorts`.
 
@@ -162,8 +172,12 @@ In the instructor dashboard in the LMS, follow these steps to set up cohorts.
 
    .. Important:: When you contact your partner manager in :ref:`Step 4 <Step
       4 Request Configuration Verified Track Cohorts>`, you provide the
-      verified track cohort's name. Do not change this cohort's name
-      after providing it to your partner manager.
+      verified track cohort's name.
+
+      After your partner manager configures your course for verified track
+      cohorting using the verified track cohort name that you provide, you
+      cannot disable cohorts, and you cannot rename the special verified track
+      cohort.
 
    * Specify **Manual** for the :ref:`cohort assignment method <Options for
      Assigning Learners to Cohorts>`.
@@ -218,9 +232,10 @@ Step 4: Request Configuration
    * The course ID
    * The name of the verified track cohort
 
-.. Important:: After you provide the name of this verified track cohort to
-   your partner manager, you must not rename this cohort.
-
+.. Important:: After your partner manager configures your course for verified
+   track cohorting using the verified track cohort name that you provide, you
+   cannot disable cohorts, and you cannot rename the special verified track
+   cohort.
 
 .. _Step 5 Release Course Verified Track Cohorts:
 
@@ -287,9 +302,6 @@ be incomplete until she takes the audit track version of the same exam (if the
 due date for the exam has not passed).
 
 
-.. Events? For MVP?
-
-
 .. _Requirements for Verified Track Cohorts:
 
 *************************************************
@@ -325,20 +337,16 @@ your course, you must follow these requirements.
   upgrade to the verified track for your course.
 
 * You provide the name of this verified track cohort to your partner manager
-  and must not rename this cohort after doing so.
+  and cannot rename this cohort after doing so.
 
-  Your partner manager sets up verified track cohorting for your course based
-  on the name of the verified track cohort that you provide. Do not rename
-  your verified track cohort after you have provided it to your partner
-  manager.
+  Your partner manager sets up verified track cohorting for your course based on
+  the name of the verified track cohort that you provide. You cannot rename this
+  verified track cohort after your partner manager configures your course to use
+  verified track cohorting.
 
-  Learners who enroll in your course as verified track learners, or upgrade to
-  the verified track are automatically placed in the cohort that you identify
-  to your partner manager as the verified track cohort. If you rename this
-  cohort after initial setup, even if you notify your partner manager of this
-  change, there might be learners who join the verified track who are no
-  longer placed in the correct cohort, and will not have access to the correct
-  course content.
+* After your course has been configured to use verified track cohorting, you
+  will not be able to disable cohorts in the course, nor will you be able to
+  change the name of the verified track cohort.
 
 
 
