@@ -336,17 +336,10 @@ your course, you must follow these requirements.
   are assigned to this cohort automatically by edx when they enroll in or
   upgrade to the verified track for your course.
 
-* You provide the name of this verified track cohort to your partner manager
-  and cannot rename this cohort after doing so.
-
-  Your partner manager sets up verified track cohorting for your course based on
-  the name of the verified track cohort that you provide. You cannot rename this
-  verified track cohort after your partner manager configures your course to use
-  verified track cohorting.
-
-* After your course has been configured to use verified track cohorting, you
-  will not be able to disable cohorts in the course, nor will you be able to
-  change the name of the verified track cohort.
+* Provide the name of the cohort you will use for your verified track learners
+  to your partner manager. After your course has been configured to use verified
+  track cohorting, you will not be able to change the name of the verified track
+  cohort, or to disable cohorts in the course.
 
 
 
