@@ -14,5 +14,6 @@ EdX Course Catalog API User Guide
     :maxdepth: 2
 
     front_matter/index
+    authentication/index
     course_catalog/index
 
