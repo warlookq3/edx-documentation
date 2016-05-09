@@ -4,15 +4,20 @@
 Authenticating as an edX Web Service User
 #############################################
 
-EdX REST web services clients authenticate to access personalized information and secure resources. When a REST client authenticates with an edX REST web service, it does the following.
+REST web services clients must authenticate when they make REST requests at api.edx.org. Authenticating allows edX web services to verify the identify of the client and associate it with a specific edX.org user.
+
+When a REST client authenticates with an edX REST web service, it does the following.
 
 * The client presents a client identifier and a secret string to the
-  ``/oauth2/v1/access_token`` resource and receives an access token.
+  ``/oauth2/v1/access_token`` authentication resource and receives an access
+  token.
 
 * The client includes the access token when it makes another REST web services
   request.
 
-The following diagram shows a REST client presenting its client ID and client secret to the ``/oauth2/v1/access_token`` resource. The ``access_token`` resource returns an access token.
+An access token is a text string that includes encoded information about the client, the user, and the period of time in which the token is valid. Access tokens expire after a period of time that is specified when you request them. After an access token expires, you must get a new token to from the ``/oauth2/v1/access_token`` authentication resource.
+
+The following diagram shows a REST client presenting its client ID and client secret to the ``/oauth2/v1/access_token`` authentication resource. The authentication resource returns an access token.
 
 .. image:: ../../../shared/images/api-authentication-get-token.png
   :width: 800
@@ -20,7 +25,7 @@ The following diagram shows a REST client presenting its client ID and client se
       credentials to the authentication web service and receiving an access
       token.
 
-The following diagram shows a REST client presenting an access token when it requests a REST resource. After it accepts the access token, the REST web service returns the resource data.
+The following diagram shows a REST client presenting an access token when it requests a REST resource. After the REST web service accepts the access token, it returns the resource data.
 
 .. image:: ../../../shared/images/api-authentication-present-token.png
   :width: 800
@@ -31,9 +36,13 @@ The edX REST web services use the OAuth 2.0 standard for authentication. OAuth
 2.0 is an open standard used by many systems that require secure user
 authentication. See the `OAuth 2.0 Standard`_ for more information.
 
-The example REST requests shown in this guide use the ``curl`` command-line program to send HTTP messages to edX web services. You can use any technology to send REST requests. The examples use the ``curl`` program to show the syntax and data for a request in a way that is easy to read. For more information about the ``curl`` program, see .
+The example REST requests shown in this guide use the ``curl`` command-line program to send HTTP messages to edX web services. You can use any technology to send REST requests. The examples use the ``curl`` program to show the syntax and data for a request in a way that is easy to read. For more information about the ``curl`` program, see `curl client program`_.
 
-.. I think this might be a good place to explain how to get client credentials.
+.. _getting_a_client_id_and_secret:
+
+******************************
+Getting a Client ID and Secret
+******************************
 
 .. _getting_an_access_token:
 
@@ -41,26 +50,99 @@ The example REST requests shown in this guide use the ``curl`` command-line prog
 Getting an Access Token
 *********************************************
 
-To get an access token, you send a POST request to the ``/oauth2/v1/access_token`` resource. The response you receive contains the access token string.
+To get an access token, you send a ``POST`` request to the
+``/oauth2/v1/access_token`` authentication resource. The response you receive
+contains the access token string.
 
 To get an access token for edX REST web services, follow these steps.
 
 #. Make sure you have the client ID and client secret strings for your REST
    HTTP client.
 
-#. Send a POST HTTP request
+#. Send a ``POST`` HTTP request to the ``/oauth2/v1/access_token``
+   authentication resource. Include your client identifier and client secret in
+   the message body of your ``POST`` request. Include the client ID and secret
+   in a string that includes ``grant_type=client_credentials`` and
+   ``token_type=jwt`` as shown in the following example.
+
+   ``grant_type=client_credentials&client_id={client id}&client_secret={client secret}&token_type=jwt``
+
+   For an example request, see :ref:`example_access_token_request`.
+
+#. Find the access token string in the ``access_token`` object in the JSON
+   response data. For more information about the authentication endpoint
+   response data, see :ref:`authentication_endpoint_response`.
+
+   The following example access_token object includes and access token string.
+
+   .. code-block:: json
+
+      "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYW1pbHlfbmFtZSI
+      6IkJsYWNrYnVybiIsImF1ZCI6Iklua29jdWpMaWt5dWNzRWR3aVdhdGRlYnJFYWNrbWV2TGFr
+      RHVpZktvb3Noa2FrV293IiwiaXNzIjoiaHR0cHM6Ly9jb3Vyc2VzLnN0YWdlLmVkeC5vcmcvb
+      2F1dGgyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY2xpbnRvbmIiLCJnaXZlbl9uYW1lIjoiQ2
+      xpbnRvbiIsImV4cCI6MTQ5NDA5ODQwOCwiaWF0IjoxNDYyNTYyNDA5LCJlbWFpbCI6ImNibGF
+      ja2J1cm5AZWR4Lm9yZyIsIm5hbWUiOiJDbGludG9uIEJsYWNrYnVybiJ9.mumH2jIpUtweprF
+      Av1JwlFnm13a4-UyFktzegFa9doE"
+
+
+.. _example_access_token_request:
+
+====================================
+Example Access Token Request
+====================================
+
+The following example ``curl`` program command requests an access token from the api.edx.org authentication endpoint.
+
+.. code-block:: bash
+
+    curl -X POST \
+    -d "grant_type=client_credentials&client_id=VBn1AkrAE28ArNOiziEKq03UGu9oI0h
+    4O9DPbvwe&client_secret=wERatup7r7ItaFMUqjZKzg98xLu6QzboPEQSBL72hfr6s7vx5Xj
+    lqu2IMC2TnaMutVLZF9AGXn9LqZv9P9oE73pAV6L4iZxzpuQB3MPmrKEZbfPdPjagkBdmLjQXuT
+    mk&token_type=jwt" \
+    https://api.edx.org/oauth2/v1/access_token
+
+.. _authentication_endpoint_response:
+
+==================================================
+Understanding the Authentication Endpoint Response
+==================================================
+
+The api.edx.org authentication endpoint returns JSON data that includes an
+access token string and information about that access token.
+
+The objects in the authentication endpoint response data are described in the
+following list.
+
+* access_token: The access token string that you can use to make REST requests.
+
+* expires_in: The length of time, in seconds, that the access token will be
+  accepted.
+
+* scope: The internal resources that your REST client has access to. You do not
+  need to use the information in the ``scope`` object.
+
+* token_type: A description of the format of the access token. You specify the
+  format of an access token when you use it to make REST requests.
+
+
+The following example JSON response data shows the ``access_token`` object and the access token string.
 
 .. code-block:: json
 
     {
-        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYW1pbHlfbmFtZSI6IkJsYWNrYnVybiIsImF1ZCI6Iklua29jdWpMaWt5dWNzRWR3aVdhdGRlYnJFYWNrbWV2TGFrRHVpZktvb3Noa2FrV293IiwiaXNzIjoiaHR0cHM6Ly9jb3Vyc2VzLnN0YWdlLmVkeC5vcmcvb2F1dGgyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY2xpbnRvbmIiLCJnaXZlbl9uYW1lIjoiQ2xpbnRvbiIsImV4cCI6MTQ5NDA5ODQwOCwiaWF0IjoxNDYyNTYyNDA5LCJlbWFpbCI6ImNibGFja2J1cm5AZWR4Lm9yZyIsIm5hbWUiOiJDbGludG9uIEJsYWNrYnVybiJ9.mumH2jIpUtweprFAv1JwlFnm13a4-UyFktzegFa9doE",
-        "expires_in": 31535999,
-        "scope": "profile openid email permissions",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYW1pbHlfbmFtZ
+        SI6IiIsImF1ZCI6Iklua29jdWpMaWt5dWNzRWR3aVdhdGRlYnJFYWNrbWV2TGFrRHVpZktv
+        b3Noa2FrV293IiwiaXNzIjoiaHR0cHM6Ly9jb3Vyc2VzLnN0YWdlLmVkeC5vcmcvb2F1dGg
+        yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGRlc2phcmRpbnMiLCJnaXZlbl9uYW1lIjoiIi
+        wiZXhwIjoxNDYyODQ2NjAyLCJpYXQiOjE0NjI4MTA2MDIsImVtYWlsIjoicGRlc2phcmRpb
+        nNAZWR4Lm9yZyIsIm5hbWUiOiIifQ.xuHNeNYlPjeayZKRlyasqWNtfwnvF8PyK6Fp5PB50
+        EM",
+        "expires_in": 36000,
+        "scope": "read write profile email",
         "token_type": "JWT"
     }
-
-
-
 
 .. _using_an_access_token:
 
@@ -68,18 +150,24 @@ To get an access token for edX REST web services, follow these steps.
 Using an Access Token to Make REST Requests
 *********************************************
 
+To make an api.edx.org REST request, you include an access token string in the
+``Authorization`` HTTP header field. In addition to the access token string,
+you specify the token type, for example ``JWT``.
 
+The following example ``curl`` program command sends a REST request to an
+api.edx.org endpoint. The example request includes the token type and access
+token string in the ``Authorization`` HTTP header field.
 
+.. code-block:: bash
 
-
-
-
-***************************************
-Registering with Your Open edX Instance
-***************************************
-
-To use the edX Platform API with courses on your instance of Open edX, you must
-register your application with the Open edX server. See the OAuth 2.0
-specification for details.
+  curl -X GET \
+  -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYW1pbHlfbmFtZ
+      SI6IiIsImF1ZCI6Iklua29jdWpMaWt5dWNzRWR3aVdhdGRlYnJFYWNrbWV2TGFrRHVpZktv
+      b3Noa2FrV293IiwiaXNzIjoiaHR0cHM6Ly9jb3Vyc2VzLnN0YWdlLmVkeC5vcmcvb2F1dGg
+      yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGRlc2phcmRpbnMiLCJnaXZlbl9uYW1lIjoiIi
+      wiZXhwIjoxNDYyODQ2NjAyLCJpYXQiOjE0NjI4MTA2MDIsImVtYWlsIjoicGRlc2phcmRpb
+      nNAZWR4Lm9yZyIsIm5hbWUiOiIifQ.xuHNeNYlPjeayZKRlyasqWNtfwnvF8PyK6Fp5PB50
+      EM" \
+  https://api.edx.org/catalog/v1/catalogs/
 
 .. include:: ../../../links/links.rst

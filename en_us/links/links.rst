@@ -449,3 +449,4 @@
 
 .. _OAuth 2.0 Standard: https://tools.ietf.org/html/draft-ietf-oauth-v2-31
 
+.. _curl client program: https://curl.haxx.se/
