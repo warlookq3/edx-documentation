@@ -7,9 +7,9 @@ Course Catalog API Overview
 Use the Course Catalog API to obtain information about the catalogs that edX
 offers, as well as information about the courses in a specific catalog.
 
-Before you use the Course Catalog API, you must request credentials from edX.
-For more information, see :ref:`Get Credentials for the EdX Course Catalog
-API`.
+Before you use the Course Catalog API, you must request credentials to access
+edX REST web services. For more information, see
+:ref:`getting_a_client_id_and_secret`.
 
 Using the Course Catalog API, you can accomplish the following tasks.
 

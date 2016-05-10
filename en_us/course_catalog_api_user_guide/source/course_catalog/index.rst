@@ -8,5 +8,4 @@ Using the EdX Course Catalog API
    :maxdepth: 2
 
    overview
-   obtain_credentials
    catalog

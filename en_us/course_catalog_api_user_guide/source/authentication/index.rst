@@ -38,13 +38,102 @@ authentication. See the `OAuth 2.0 Standard`_ for more information.
 
 The example REST requests shown in this guide use the ``curl`` command-line program to send HTTP messages to edX web services. You can use any technology to send REST requests. The examples use the ``curl`` program to show the syntax and data for a request in a way that is easy to read. For more information about the ``curl`` program, see `curl client program`_.
 
+The following sections provide more information about authenticating as an edX REST web services user.
+
+.. contents::
+   :local:
+   :depth: 1
+
 .. _getting_a_client_id_and_secret:
 
-******************************
-Getting a Client ID and Secret
-******************************
+*************************************
+Getting a Client ID and Client Secret
+*************************************
 
 .. _getting_an_access_token:
+
+Your API client credentials consist of a client ID and a client secret. EdX
+generates your client credentials after you request access to the API.
+
+To obtain your client credentials, complete the following steps.
+
+.. contents::
+   :local:
+   :depth: 1
+
+The following example shows a client ID and client secret.
+
+.. code-block:: none
+
+    Application Name: My REST Web Services Application
+
+    API Client ID: VBn1F8ArNOiviEKq05UHu9oI0h4OkrEA29DPbzwe
+
+    API Client Secret: wDSbtup7r7Ifr6s7vs5Xjlqu2I MD2TmaMutVMZF8AGXn9LqZv9P9oE7
+    3pAV6L4iZxzqtQB3MPmrKEZbtaFMUqjZKzg98xMu5QzboPDQSBL72hfPdPjagkBdmLjQXuTmk
+
+.. _Obtain EdX User Account and Sign In:
+
+===================================
+Obtain EdX User Account and Sign In
+===================================
+
+To obtain an edX user account, contact the edX marketing team. The team will
+send you an account username and a temporary password.
+
+.. How should affiliates contact the marketing team?
+
+To sign in to edX and change your password, go to
+https://courses.edx.org/login.
+
+
+.. _CC API Complete Access Request Form:
+
+========================================
+Complete the EdX API Access Request Form
+========================================
+
+After you have signed in to edX, follow these steps.
+
+#. Go to http://courses.edx.org/api-admin.
+#. On the **EdX API Access Request** page, enter the information for your
+   organization. All fields are required.
+
+    * **Company Name**: The name of your company. (---Any additional info, like
+      legal name?)
+    * **Website**: The URL for your company's website.
+    * **Company Address**: Your company's mailing address. (---form just says
+      "contact address" - are PO boxes OK?)
+    * **Application Description**: A brief description of the main use for your
+      application.
+
+#. At the bottom of the form, select the **Terms of Service** check box.
+#. Select **Save** to submit your request. (---Is the button name **Save** or
+   **Submit** or something else?)
+
+After you submit the request form, edX will review your request, and then edX
+will send you an email message approving or denying your request. (---Time
+frame for expected response?)
+
+.. _CC API Generate API Credentials:
+
+========================
+Generate API Credentials
+========================
+
+When you receive your approval email message from edX, follow these steps.
+
+#. Go to http://courses.edx.org/api-admin/status.
+#. On the page that opens, enter the following information.
+
+   * Name: The name of your application.
+   * Redirect URIs: The redirect URL or URLs that you want your application to
+     use.
+
+#. Select **Generate API client credentials**.
+
+#. The screen displays your application name, client ID, client secret, and any
+   redirect URIs that you entered. Make sure that you record your client ID and client secret.
 
 *********************************************
 Getting an Access Token
