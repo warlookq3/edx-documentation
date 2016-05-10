@@ -936,6 +936,13 @@ The safe template linter is a tool to help you make sure that you are
 following best practices inside edx-platform. It is not yet possible to run the
 linter against other repositories.
 
+To run the linter on the changes in your current Git branch, use the following
+command.
+
+.. code-block:: bash
+
+    paver run_safecommit_report
+
 To run the linter on all of edx-platform, use the following command.
 
 .. code-block:: bash
@@ -954,13 +961,6 @@ For additional options you can use to run the linter, use the following command.
 .. code-block:: bash
 
     ./scripts/safe_template_linter.py --help
-
-To run the linter on the changes in your current Git branch, use the following
-command.
-
-.. code-block:: bash
-
-    ./scripts/safe-commit-linter.sh
 
 The following code block shows sample output from the linter.
 

@@ -22,8 +22,10 @@ edx-platform codebase and run::
 
     $ paver run_quality
 
-You can also use the `paver run_pep8`` and ``paver run_pylint`` commands to run just pep8 or
-pylint.
+You can also use the ``paver run_pep8`` and ``paver run_pylint`` commands to run
+just pep8 or pylint. You can also run ``paver run_safecommit_report`` or
+``paver run_safelint`` to run just the Safe Template Linter against your branch
+or against the entire platform.
 
 This will print a report of the quality violations that your branch has made.
 
