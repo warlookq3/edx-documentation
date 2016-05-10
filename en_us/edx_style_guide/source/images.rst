@@ -48,7 +48,7 @@ reducing the width of the intended image will have the effect of making the
 screen shot too long.
 
 The following image has a lot of white space inside the component editor. To
-produce a better illustration of the component edito, make the browser
+produce a better illustration of the component editor, make the browser
 narrower.
 
 .. image:: Images/DiscussionComponentEditor.png

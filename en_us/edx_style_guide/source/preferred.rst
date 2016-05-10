@@ -18,8 +18,10 @@ Preferred Usage
       text.
 
       Do not capitalize job titles, such as professor, instructor, or program
-      manager. Do not capitalize terms unless they are trademarks, such as
-      instructor dashboard or course about video.
+      manager. Do not capitalize terms unless they are trademarks, so refer to
+      the instructor dashboard or a course about video rather than the
+      Instructor Dashboard or a course About video.
+
   * - Contractions
     - Do not use.
   * - Cross-references
@@ -99,7 +101,7 @@ Preferred Usage
   * - Steps
     - To introduce an ordered list of procedural steps, use "To {verb task},
       follow these steps." Note the complete sentence and terminal period. For
-      example, "To add a course update, follow these steps.
+      example, "To add a course update, follow these steps.""
   * - Tables
     - When you include a table, be sure to include a heading row. In addition,
       consider whether a stub column is appropriate. The heading row and stub

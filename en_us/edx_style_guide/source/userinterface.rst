@@ -10,14 +10,14 @@ labels and do not describe the control types.
 * Incorrect: In the **Randomization** drop-down list, click the **Never**
   option.
 
-* Correct: From the **Randomization** list, choose **Never**.
+* Correct: From the **Randomization** list, select **Never**.
 
 This convention reduces word count and makes the documentation less likely to
 go out of date after a software change.
 
 Because screen readers organize all link selections together, and all button
 selections together, and so on, if you do include the control type, it is
-critical that it be described as coded, even if it is styled to look like
+critical that you describe it as it is coded, even if it is styled to look like
 another control.
 
 *******************
@@ -43,11 +43,11 @@ This table lists edX-specific terms and exceptions to Microsoft style.
        course sections and subsections at the left side of the **Course** page
        in the LMS. Use "left pane."
    * - dialog box
-     - Do not use dialog alone to refer to the user interface control. Do not
-       use modal or modal dialog.
+     - Do not use "dialog" alone to refer to the user interface control. Do not
+       use "modal" or "modal dialog".
    * - field
      - A control that accepts user input that is typed or pasted in. Use in
-       place of text box.
+       place of "text box".
    * - icon
      - A user interface control that has an image for a label instead of text.
        To identify icons, use the mouseover help text as the icon label. If the

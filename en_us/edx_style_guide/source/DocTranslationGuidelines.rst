@@ -73,13 +73,13 @@ Do not translate or alter any of the following elements.
 
 * The filenames and locations of any image files in the repository. If you
   replace any original source images with localized images, make sure the
-  replacement image files have exactly the same filenames, and replace them in
-  the same images folder location, so that image links within the
+  replacement image files have exactly the same filenames, and place them in
+  the same ``images`` folder location, so that image links within the
   documentation are not broken.
 
 * Words in file paths in cross-references or image references.
 
-* Words that are part of .rst directives, including "note" or "warning".
+* Words that are part of .rst directives, including ``note`` anf ``important``.
   Examples are listed in :ref:`Work with edX Documentation Source Files` and
   :ref:`ExampleRSTFile<Anchor For ExampleRSTFile>`.
 

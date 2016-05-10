@@ -52,9 +52,9 @@ Word List
    * - sample
      - Use instead of "snippet". "Example" can also be used.
    * - section
-     - In the edX guides, use section to refer to any part of a guide that is a
-       parent to other content, including other sections or individual topics.
-       Use instead of chapter.
+     - In the edX guides, use "section" to refer to any part of a guide that is
+       a parent to other content, including other sections or individual
+       topics. Use instead of "chapter".
    * - select
      - Use instead of "click" (mouse), "press" (keyboard), or "tap"
        (smartphone). Accessible alternatives are "choose" (for a UI element
@@ -68,7 +68,7 @@ Word List
      - One word. Use instead of "mobile device". For example, Android
        smartphones and iPhones.
    * - Student Dashboard
-     - Present both words in lower case.
+     - Present both words in lowercase.
    * - third party (n), third-party (adj)
      - "Third party" is a noun: "This product comes from a third party".
        "Third-party" is the adjective form: "third-party software".

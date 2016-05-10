@@ -11,5 +11,5 @@ source contributors around the world.
 
 The edX documentation team follows the *Microsoft Manual of Style*, 4th
 edition. This guide documents terms and usage choices that are not covered by
-the *Microsoft Manual of Style*. It also documents company or team decisions
-about usage that differs from the *Microsoft Manual of Style*
+the *Microsoft Manual of Style*. It also documents company and team decisions
+about usage that differ from the *Microsoft Manual of Style*.
